@@ -9,10 +9,10 @@ export const jpFormat: PluginFunc = function(_o, c, _d) {
     const str = formatStr || 'YYYY-MM-DDTHH:mm:ssZ'
     const result = str.replace(/\[([^\]]+)]|rrrr/g, (match) => {
       switch (match) {
-        case 'rrrr':
-          return getJpYear(this.toDate())
-        default:
-          return match
+      case 'rrrr':
+        return getJpYear(this.toDate())
+      default:
+        return match
       }
     })
     return oldFormat.bind(this)(result)
