@@ -1,0 +1,30 @@
+{
+  "name": "dayjs-jp-format",
+  "version": "0.0.1",
+  "description": "Japanese calendar format for dayjs.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyakt/dayjs-jp-format.git"
+  },
+  "keywords": [
+    "dayjs"
+  ],
+  "author": "Hayato Kajiyama <hyakt0@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyakt/dayjs-jp-format/issues"
+  },
+  "homepage": "https://github.com/hyakt/dayjs-jp-format#readme",
+  "peerDependencies": {
+    "dayjs": "^1.8.28"
+  },
+  "devDependencies": {
+    "dayjs": "^1.8.28",
+    "typescript": "^3.9.5"
+  }
+}

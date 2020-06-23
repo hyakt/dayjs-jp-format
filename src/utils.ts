@@ -1,0 +1,12 @@
+export const getJpYear = (date: Date): string => {
+  let result: string
+  try {
+    result = Intl.DateTimeFormat('ja-JP-u-ca-japanese', {
+      year: '2-digit',
+      era: 'long'
+    }).format(date).slice(0, 4)
+  } catch {
+    result = 'error'
+  }
+  return result
+}
