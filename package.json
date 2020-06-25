@@ -1,6 +1,6 @@
 {
   "name": "dayjs-jp-format",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Japanese calendar format for dayjs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
