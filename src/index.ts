@@ -1,18 +1,19 @@
 import { PluginFunc } from 'dayjs'
-import { getJpYear } from './utils'
+import { getJpYear, getJpEra } from './utils'
 
-export const jpFormat: PluginFunc = function(_o, c, _d) {
+export const jpFormat: PluginFunc = function(_o, c) {
   const proto = c.prototype
   const oldFormat = proto.format
 
   proto.format = function(formatStr) {
-    const str = formatStr || 'YYYY-MM-DDTHH:mm:ssZ'
-    const result = str.replace(/\[([^\]]+)]|rrrr/g, (match) => {
+    const result = formatStr.replace(/\[([^\]]+)]|r+|/g, (match) => {
       switch (match) {
-      case 'rrrr':
-        return getJpYear(this.toDate())
-      default:
-        return match
+        case 'rrrr':
+          return getJpYear(this.toDate())
+        case 'rr':
+          return getJpEra(this.toDate())
+        default:
+          return match
       }
     })
     return oldFormat.bind(this)(result)

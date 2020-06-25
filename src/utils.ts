@@ -6,7 +6,19 @@ export const getJpYear = (date: Date): string => {
       era: 'long'
     }).format(date).slice(0, 4)
   } catch {
-    result = 'error'
+    result = '該当なし'
+  }
+  return result
+}
+
+export const getJpEra = (date: Date): string => {
+  let result: string
+  try {
+    result = Intl.DateTimeFormat('ja-JP-u-ca-japanese', {
+      era: 'long'
+    }).format(date).slice(0, 2)
+  } catch {
+    result = '不明'
   }
   return result
 }
