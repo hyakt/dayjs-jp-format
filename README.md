@@ -1,6 +1,7 @@
 dayjs-jp-format
 ===
 [![Actions Status](https://github.com/hyakt/dayjs-jp-format/workflows/Node.js%20CI/badge.svg)](https://github.com/hyakt/dayjs-jp-format/actions)
+[![npm version](https://badge.fury.io/js/dayjs-jp-format.svg)](https://badge.fury.io/js/dayjs-jp-format)
 
 day.jsのformat関数にて日本の元号を表示するためのプラグインです。  
 A plugin is an independent module that can be added to Day.js to extend functionality or add japanse calendar features.
