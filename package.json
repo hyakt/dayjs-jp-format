@@ -3,11 +3,16 @@
   "version": "0.0.1",
   "description": "Japanese calendar format for dayjs.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest --coverage",
-    "lint": "eslint --ext .js,.ts ./src/"
+    "lint": "eslint --ext .js,.ts ./src/",
+    "prepublish": "npm run test && npm run build"
   },
+   "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hyakt/dayjs-jp-format.git"
@@ -33,6 +38,5 @@
     "jest": "^26.1.0",
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.5"
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  }
 }
