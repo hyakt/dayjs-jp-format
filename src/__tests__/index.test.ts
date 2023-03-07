@@ -11,7 +11,7 @@ describe('index', () => {
 
   it('could convert the year correctly', () => {
     const actualDateString = '2020-06-24'
-    expect(dayjs(actualDateString).format('rrrr')).toBe('令和2年')
+    expect(dayjs(actualDateString).format('rrrr')).toBe('令和2')
   })
 
   it('could convert the era correctly', () => {
@@ -21,6 +21,6 @@ describe('index', () => {
 
   it('could use the complex format', () => {
     const actualDateString = '2020-06-24'
-    expect(dayjs(actualDateString).format('YYYY(rrrr)')).toBe('2020(令和2年)')
+    expect(dayjs(actualDateString).format('YYYY(rrrr)')).toBe('2020(令和2)')
   })
 })
